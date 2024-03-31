@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="">Home</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="first">Router First</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="second">Router Second</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="wish">Wish</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="contact">Contact</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="products">Products</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <a href="#" (click)="$event.preventDefault(); goToContact()">Go to Contact (onClick)</a>
+
+  <router-outlet></router-outlet>
+  <!-- <app-wish /> -->
+  <!-- <app-contact></app-contact> -->
+
+</div>
