@@ -1,0 +1,4 @@
+<div class="home">
+  <div *ngIf="isPending">Loading...</div>
+  <app-bloglist *ngIf="!isPending" [blogs]="blogs" [title]="'All Blogs!'"></app-bloglist>
+</div>

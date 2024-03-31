@@ -1,0 +1,10 @@
+<div class="blog-list">
+  <h2>{{title}}</h2>
+  <div class="blog-preview" *ngFor="let blog of blogs">
+    <a href="#" [routerLink]="['/blogs', blog.id]">
+      <h2>{{blog.title}}</h2>
+      <p>Written by {{blog.author}}</p>
+    </a>
+    <!-- <button (click)="handleDelete(blog)">delete blog</button> -->
+  </div>
+</div>
