@@ -107,7 +107,8 @@ visibleItems: WishItem[] = this.items;
 
 
 ```typescript
-// Using a getter method to make sure an updated list is returned everytime visibleItems is referenced
+// Using a getter method to make sure an updated list 
+// is returned everytime visibleItems is referenced
 get visibleItems(): WishItem[] {
 
     let value = this.listFilter;
@@ -473,15 +474,18 @@ submitForm() {
     <!-- error message if invalid -->
     <div *ngIf="contactForm.get('senderEmail')?.touched">
         <!-- required is built-in -->
-        <small class="text-danger" *ngIf="contactForm.get('senderEmail')?.hasError('required')">
+        <small class="text-danger" 
+               *ngIf="contactForm.get('senderEmail')?.hasError('required')">
             Please enter an email
         </small>
         <!-- email is built-in -->
-        <small class="text-danger" *ngIf="contactForm.get('senderEmail')?.hasError('email')">
+        <small class="text-danger" 
+               *ngIf="contactForm.get('senderEmail')?.hasError('email')">
             Email is invalid
         </small>
         <!-- invalidDomain is from our custom validator -->
-        <small class="text-danger" *ngIf="contactForm.get('senderEmail')?.hasError('invalidDomain')">
+        <small class="text-danger" 
+               *ngIf="contactForm.get('senderEmail')?.hasError('invalidDomain')">
             Email is not in the allowed domain
         </small>
     </div>
@@ -516,7 +520,12 @@ function invalidEmailDomain(control: AbstractControl): ValidationErrors | null {
 // FormControl with built-in validators, or custom ValidatorFn
 contactForm = new FormGroup({
     senderName: new FormControl('', Validators.required),
-    senderEmail: new FormControl('', [Validators.required, Validators.email, invalidEmailDomain]),
+    senderEmail: new FormControl('', [
+        Validators.required, 
+        Validators.email, 
+        invalidEmailDomain
+      ]
+    ),
     senderMessage: new FormControl('', [Validators.required, Validators.minLength(10)]),
 });
 
